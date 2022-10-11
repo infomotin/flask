@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create a from with bootstrap and add a submit button to it and add a route to it and create a function to handle the form data and print it on the console.
+     -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    <!-- for loop in jinja2 --> -->
+     {% for i in data %}
+    <div>
+        <h1>Name:{{i['name']}}</h1>
+        <p>Age:{{i['age']}}</p>
+        <p>email:{{ i['email'] }}</p>
+        <p>password:{{ i['password'] }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
